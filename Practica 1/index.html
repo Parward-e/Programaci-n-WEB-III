@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inf-123 Tipos de Layout</title>
+</head>
+<body>
+    <!-- Layout diseño o plantilla que define la ubicacion de los elementos en la pagina
+         -->
+    <style>
+        /*-------------------- Layout 1 ----------------------*/
+        .contenedor1{
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        .header1 , .main1, .footer1{
+            padding: 20px;
+            background-color: lightblue;
+            margin: 10px;
+        }
+        /*------------------- Layout 2 ---------------------*/
+        .contenedor2{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .contenedor2a{
+            /*justify-content: center;*/
+            display: flex;    
+            flex-direction: row;
+            
+        }
+        .col{
+            width: 33%;            
+            padding: 20px;
+            background-color: lightgreen;
+            margin: 10px;
+        }
+        .contenedor2b{
+            padding: 20px;
+            background-color: lightgreen;
+            margin: 10px;  
+        }
+        /*------------------ Layout 3 ---------------------*/
+        .contenedor3{
+            display: grid;
+            margin: 0px 20% ;
+            grid-template-columns: auto auto ;
+        }
+        .tar{
+            background: lightgoldenrodyellow;
+            background-color: palegoldenrod;
+            padding: 20px;
+            margin: 10px;
+
+        }
+    </style>
+    <h1> Layout de una solo columna</h1>
+    <div class="contenedor1">
+        <header class="header1">Encabezado</header>
+        <main class="main1">Contenido principal</main>
+        <footer class="footer1">Pie de pagina</footer>
+    </div>
+    <h1>Layout de multiples columnas (Flexbox)</h1>
+    <div class="contenedor2">
+        <div class="contenedor2a">
+            <div class="col">Columna 1</div>
+            <div class="col">Columna 2</div>
+            <div class="col">Columna 3</div>
+        </div>
+        <div class="contenedor2b">Culumna 4</div>
+    </div>
+    <h1>Layout cuadricula para tarjetas (Grid)</h1>
+    <div class="contenedor3">
+        <div class="tar">Tarjeta 1</div>
+        <div class="tar">Tarjeta 2</div>
+        <div class="tar">Tarjeta 3</div>
+        <div class="tar">Tarjeta 4</div>
+    </div>
+    <p>David Ramos Ponce</p>
+</body>
+</html>
